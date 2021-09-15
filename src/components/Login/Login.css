@@ -9,6 +9,7 @@
 .Login-login-container {
   background-color: #fff;
   border: 1px solid #dbdbdb;
+  margin-bottom: 10px;
 }
 
 .Login-logo-container {
@@ -16,6 +17,10 @@
   align-items: center;
   justify-content: center;
   margin: 22px auto 12px;
+}
+
+.Login-logo {
+  margin: 10px 0 26px;
 }
 
 .Login-input {
@@ -29,9 +34,11 @@
 
 .Login-button {
   border: 1px solid transparent;
-  background-color: #0095f6 !important;
+  background-color: #c4e7ff !important;
+  box-shadow: none !important;
   margin-top: 8px !important;
   margin-bottom: 8px !important;
+  font-weight: 600 !important;
 }
 
 .Login-or-container {
@@ -43,6 +50,7 @@
 
 .Login-or {
   padding: 0 2rem;
+  font-size: 13px;
 }
 
 .Login-line {
@@ -53,6 +61,7 @@
 
 .Login-facebook {
   margin: 8px 40px;
+  font-size: 14px;
 }
 
 .Login-fb-button {
@@ -65,9 +74,32 @@
 .Login-forgot-password-container {
   justify-content: center;
   text-align: center;
-  margin: 12px 0;
+  margin: 12px 0 24px;
 }
 
 .Login-forgot-password {
   color: #00376b;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.Login-signup-container {
+  margin: 0 0 10px;
+  padding: 10px 0;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+}
+
+.Login-signup {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+}
+
+.Login-signup-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0095f6;
+  text-decoration: none;
 }

@@ -10,7 +10,7 @@ const Login = () => {
     <div className="Login-container">
       <div className="Login-login-container">
         <div className="Login-logo-container">
-          <h1>Reactgram</h1>
+          <h1 className="Login-logo">Reactgram</h1>
         </div>
         <div className="Login-input-top-container">
           <form>
@@ -22,6 +22,9 @@ const Login = () => {
                 variant="outlined"
                 fullWidth
                 className="Login-textfield"
+                size="small"
+                inputProps={{ style: { fontSize: 12 } }}
+                InputLabelProps={{ style: { fontSize: 12 } }}
               />
               <TextField
                 id="outlined-password-input"
@@ -31,6 +34,9 @@ const Login = () => {
                 variant="outlined"
                 fullWidth
                 className="Login-textfield"
+                size="small"
+                inputProps={{ style: { fontSize: 12 } }}
+                InputLabelProps={{ style: { fontSize: 12 } }}
               />
               <Button
                 variant="contained"
@@ -38,6 +44,7 @@ const Login = () => {
                 className="Login-button"
                 fullWidth
                 onClick={() => console.log("clicked")}
+                style={{ textTransform: "lowercase" }}
               >
                 Log In
               </Button>
@@ -56,6 +63,7 @@ const Login = () => {
               fullWidth
               startIcon={<FacebookIcon />}
               onClick={() => console.log("Login with facebook")}
+              size="small"
             >
               Log in with Facebook
             </Button>
@@ -68,7 +76,16 @@ const Login = () => {
         </div>
         <div className="Login-input-bottom-container"></div>
       </div>
-      <div className="Login-signup-container"></div>
+      <div className="Login-signup-container">
+        <div className="Login-signup">
+          <p>
+            Don't have an account? &nbsp;
+            <Link to="signUp" className="Login-signup-link">
+              Sign up
+            </Link>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
