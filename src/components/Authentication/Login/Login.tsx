@@ -41,7 +41,7 @@ const Login = () => {
         <div className="Login-logo-container">
           <h1 className="Login-logo">Reactgram</h1>
         </div>
-        <div className="Login-input-top-container">
+        <div>
           <form>
             <div className="Login-input">
               <TextField
@@ -113,13 +113,12 @@ const Login = () => {
             </Link>
           </div>
         </div>
-        <div className="Login-input-bottom-container"></div>
       </div>
       <div className="Login-signup-container">
         <div className="Login-signup">
           <p>
             Don't have an account? &nbsp;
-            <Link to="signUp" className="Login-signup-link">
+            <Link to="signup" className="Login-signup-link">
               Sign up
             </Link>
           </p>

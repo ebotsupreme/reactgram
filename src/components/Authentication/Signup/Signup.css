@@ -1,4 +1,4 @@
-.Login-container {
+.Signup-container {
   max-width: 350px;
   margin: 0 auto;
   margin-top: 12px;
@@ -6,97 +6,92 @@
   background-color: #fafafa;
 }
 
-.Login-login-container {
+.Signup-signup-container {
   background-color: #fff;
   border: 1px solid #dbdbdb;
   margin-bottom: 10px;
 }
 
-.Login-logo-container {
+.Signup-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 22px auto 12px;
 }
 
-.Login-logo {
-  margin: 10px 0 26px;
+.Signup-logo {
+  margin: 10px 0 10px;
 }
 
-.Login-input {
+.Signup-header-text {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 40px 20px;
+  text-align: center;
+  color: #8e8e8e;
+}
+
+.Signup-input {
   margin: 0 40px 16px;
 }
 
-.Login-textfield {
+.Signup-textfield {
   margin-bottom: 6px !important;
   background-color: #fafafa;
 }
 
-.Login-button {
+.Signup-button {
   border: 1px solid transparent;
   margin-top: 8px !important;
   margin-bottom: 8px !important;
   font-weight: 600 !important;
 }
 
-.Login-or-container {
+.Signup-or-container {
   display: flex;
   align-items: center;
-  margin: 10px 40px 18px;
+  margin: 18px 40px 18px;
   color: #8e8e8e;
 }
 
-.Login-or {
+.Signup-or {
   padding: 0 2rem;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.Login-line {
+.Signup-line {
   flex: 1;
   height: 1px;
   background-color: #8e8e8e;
 }
 
-.Login-facebook {
+.Signup-facebook {
   margin: 8px 40px;
   font-size: 14px;
 }
 
-.Login-fb-button {
-  background-color: transparent !important;
-  color: #4267b2 !important;
+.Signup-fb-button {
+  background-color: #0095f6 !important;
   font-weight: 700 !important;
 }
 
-.Login-forgot-password-container {
-  justify-content: center;
-  text-align: center;
-  margin: 12px 0 24px;
-}
-
-.Login-forgot-password {
-  color: #00376b;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.Login-signup-container {
+.Signup-login-container {
   margin: 0 0 10px;
   padding: 10px 0;
   background-color: #fff;
   border: 1px solid #dbdbdb;
 }
 
-.Login-signup {
+.Signup-login {
   display: flex;
   justify-content: center;
   text-align: center;
   font-size: 14px;
 }
 
-.Login-signup-link {
+.Signup-login-link {
   font-size: 14px;
   font-weight: 600;
   color: #0095f6;
