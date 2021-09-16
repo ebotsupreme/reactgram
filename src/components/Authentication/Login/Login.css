@@ -34,8 +34,6 @@
 
 .Login-button {
   border: 1px solid transparent;
-  background-color: #c4e7ff !important;
-  box-shadow: none !important;
   margin-top: 8px !important;
   margin-bottom: 8px !important;
   font-weight: 600 !important;
@@ -67,7 +65,6 @@
 .Login-fb-button {
   background-color: transparent !important;
   color: #4267b2 !important;
-  box-shadow: none !important;
   font-weight: 700 !important;
 }
 
