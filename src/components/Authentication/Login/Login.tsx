@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./Login.css";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -6,6 +7,34 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
+  useEffect(() => {
+    if (email && password) {
+      setIsBtnDisabled(false);
+    } else {
+      setIsBtnDisabled(true);
+    }
+  }, [email, password]);
+
+  const handleInputField = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+
+    if (id === "outlined-email") {
+      setEmail(value);
+    } else if (id === "outlined-password-input") {
+      setPassword(value);
+    }
+  };
+
+  const handleLogin = () => {
+    console.log("handleLogin clicked");
+  };
+
   return (
     <div className="Login-container">
       <div className="Login-login-container">
@@ -25,6 +54,8 @@ const Login = () => {
                 size="small"
                 inputProps={{ style: { fontSize: 12 } }}
                 InputLabelProps={{ style: { fontSize: 12 } }}
+                value={email}
+                onChange={handleInputField}
               />
               <TextField
                 id="outlined-password-input"
@@ -37,14 +68,18 @@ const Login = () => {
                 size="small"
                 inputProps={{ style: { fontSize: 12 } }}
                 InputLabelProps={{ style: { fontSize: 12 } }}
+                value={password}
+                onChange={handleInputField}
               />
               <Button
                 variant="contained"
                 color="primary"
                 className="Login-button"
                 fullWidth
-                onClick={() => console.log("clicked")}
+                onClick={handleLogin}
                 style={{ textTransform: "lowercase" }}
+                disableElevation
+                disabled={isBtnDisabled}
               >
                 Log In
               </Button>
@@ -62,8 +97,9 @@ const Login = () => {
               className="Login-fb-button"
               fullWidth
               startIcon={<FacebookIcon />}
-              onClick={() => console.log("Login with facebook")}
+              onClick={() => console.log("fb btn clicked")}
               size="small"
+              disableElevation
             >
               Log in with Facebook
             </Button>
