@@ -34,8 +34,6 @@
 
 .Login-button {
   border: 1px solid transparent;
-  background-color: #c4e7ff !important; /* disabled color */
-  /* background-color: #0095f6; enabled color */
   margin-top: 8px !important;
   margin-bottom: 8px !important;
   font-weight: 600 !important;

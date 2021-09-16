@@ -77,7 +77,10 @@ const Login = () => {
                 className="Login-button"
                 fullWidth
                 onClick={handleLogin}
-                style={{ textTransform: "lowercase" }}
+                style={{
+                  textTransform: "lowercase",
+                  backgroundColor: !isBtnDisabled ? "#0095f6" : "#c4e7ff",
+                }}
                 disableElevation
                 disabled={isBtnDisabled}
               >
