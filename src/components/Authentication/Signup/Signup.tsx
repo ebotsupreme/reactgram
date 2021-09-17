@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -21,6 +21,8 @@ const Signup = () => {
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
   // const [error, setError] = useState(null);
   const [iUser, setIUser] = useState<IUser>();
+
+  const history = useHistory();
 
   useEffect(() => {
     // may need to validate here first
@@ -61,6 +63,8 @@ const Signup = () => {
     console.log("user set: ", iUser);
     if (iUser) {
       SignupUserWithEmailAndPassword(iUser);
+      // route user to dashboard upon success
+      // need to implement history.push here, might need redux.
     }
   };
 

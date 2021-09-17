@@ -22,6 +22,7 @@ const SignupUserWithEmailAndPassword = async (iUser: {
     const user = userCredential.user;
     console.log("user signed in: ", user);
     console.log("user id: ", user.uid);
+
     // set user to redux state
 
     // create user in firestore
@@ -35,7 +36,8 @@ const SignupUserWithEmailAndPassword = async (iUser: {
     });
     console.log("document written with ID: ", docRef.id);
 
-    // redirect to dashboard
+    // set user token to local storage
+    window.localStorage.setItem("token", user.uid);
   } catch (error) {
     console.error("error!: ", error);
     let errorMessage = "";
