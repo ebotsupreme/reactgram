@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,8 +11,15 @@ import Login from "./components/Authentication/Login/Login";
 import Signup from "./components/Authentication/Signup/Signup";
 
 function App() {
-  // temporary user authentication state
   const [isUserAuthenticated, setUserAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const token = window.localStorage.getItem("token");
+    console.log("token", token);
+    if (token) {
+      setUserAuthenticated(true);
+    }
+  }, [isUserAuthenticated]);
 
   return (
     <div className="App">
