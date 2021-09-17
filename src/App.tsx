@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +10,7 @@ import ForgotPassword from "./components/Authentication/ForgotPassword/ForgotPas
 import Login from "./components/Authentication/Login/Login";
 import Signup from "./components/Authentication/Signup/Signup";
 
-function App() {
+const App: FC = () => {
   const [isUserAuthenticated, setUserAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -44,6 +44,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;
