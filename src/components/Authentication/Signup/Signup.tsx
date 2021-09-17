@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
-import "./Signup.css";
+import { Link } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import FacebookIcon from "@material-ui/icons/Facebook";
+import "./Signup.css";
+import { SignupUserWithEmailAndPassword } from "../../../hooks/useAuth";
 
-import { Link } from "react-router-dom";
+interface IUser {
+  email: string;
+  fullname: string;
+  username: string;
+  password: string;
+}
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -12,9 +19,13 @@ const Signup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+  // const [error, setError] = useState(null);
+  const [iUser, setIUser] = useState<IUser>();
 
   useEffect(() => {
+    // may need to validate here first
     if (email && fullname && username && password) {
+      handleUser();
       setIsBtnDisabled(false);
     } else {
       setIsBtnDisabled(true);
@@ -47,6 +58,19 @@ const Signup = () => {
   const handleSignup = () => {
     console.log("handleLogin clicked");
     console.log(email, fullname, username, password);
+    console.log("user set: ", iUser);
+    if (iUser) {
+      SignupUserWithEmailAndPassword(iUser);
+    }
+  };
+
+  const handleUser = () => {
+    setIUser({
+      email,
+      fullname,
+      username,
+      password,
+    });
   };
 
   return (
@@ -84,6 +108,7 @@ const Signup = () => {
           <form>
             <div className="Signup-input">
               <TextField
+                name="email"
                 id="outlined-email"
                 label="Email"
                 type="email"
@@ -97,6 +122,7 @@ const Signup = () => {
                 onChange={handleInputField}
               />
               <TextField
+                name="fullname"
                 id="outlined-fullname"
                 label="Full Name"
                 type="text"
@@ -110,6 +136,7 @@ const Signup = () => {
                 onChange={handleInputField}
               />
               <TextField
+                name="username"
                 id="outlined-username"
                 label="User Name"
                 type="text"
@@ -123,6 +150,7 @@ const Signup = () => {
                 onChange={handleInputField}
               />
               <TextField
+                name="password"
                 id="outlined-password-input"
                 label="Password"
                 type="password"
