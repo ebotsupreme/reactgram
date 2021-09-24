@@ -14,7 +14,7 @@ const initialState: AuthState = {
   authenticated: false,
   loading: false,
   error: "",
-  needVerficiation: false,
+  needVerification: false,
   success: "",
 };
 

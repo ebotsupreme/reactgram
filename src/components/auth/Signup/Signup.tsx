@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import FacebookIcon from "@material-ui/icons/Facebook";
+// import TextField from "@material-ui/core/TextField";
+// import Button from "@material-ui/core/Button";
+// import FacebookIcon from "@material-ui/icons/Facebook";
 import "./Signup.css";
 import { SignupUserWithEmailAndPassword } from "../../../hooks/useAuth";
 
@@ -88,7 +88,7 @@ const Signup = () => {
         </div>
         <div>
           <div className="Signup-facebook">
-            <Button
+            {/* <Button
               variant="contained"
               color="primary"
               className="Signup-fb-button"
@@ -102,7 +102,7 @@ const Signup = () => {
               }}
             >
               Log in with Facebook
-            </Button>
+            </Button> */}
           </div>
           <div className="Signup-or-container">
             <div className="Signup-line"></div>
@@ -111,7 +111,7 @@ const Signup = () => {
           </div>
           <form>
             <div className="Signup-input">
-              <TextField
+              {/* <TextField
                 name="email"
                 id="outlined-email"
                 label="Email"
@@ -182,7 +182,7 @@ const Signup = () => {
                 disabled={isBtnDisabled}
               >
                 Sign up
-              </Button>
+              </Button> */}
             </div>
           </form>
         </div>
