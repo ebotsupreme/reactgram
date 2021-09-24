@@ -8,9 +8,8 @@ export const SET_SUCCESS = "SET_SUCCESS";
 export interface User {
   id: string;
   email: string;
-  fullname: string;
-  username: string;
-  // password: string;
+  fullName: string;
+  userName: string;
   createdAt: any;
 }
 
@@ -19,14 +18,14 @@ export interface AuthState {
   authenticated: boolean;
   loading: boolean;
   error: string;
-  needVerficiation: boolean;
+  needVerification: boolean;
   success: string;
 }
 
 export interface SignUpData {
   email: string;
-  fullname: string;
-  username: string;
+  fullName: string;
+  userName: string;
   password: string;
 }
 
@@ -55,7 +54,7 @@ interface SetErrorAction {
   payload: string;
 }
 
-interface NeedVerficiationAction {
+interface NeedVerificationAction {
   type: typeof NEED_VERIFICATION;
 }
 
@@ -69,5 +68,5 @@ export type AuthAction =
   | SetLoadingAction
   | SignOutAction
   | SetErrorAction
-  | NeedVerficiationAction
+  | NeedVerificationAction
   | SetSuccessAction;
